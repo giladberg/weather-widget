@@ -1,0 +1,180 @@
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-image: url('./photos/elia-clerici-XIrIWKCQykg-unsplash.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.mainTitle {
+  font-size: 6rem;
+  color: #ffff66;
+  font-family: 'Permanent Marker', cursive;
+}
+.input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.secTitle {
+  font-size: 2.3rem;
+  color: #ffff66;
+  font-family: 'Patrick Hand', cursive;
+}
+input,
+textarea {
+  color: black;
+  border: none;
+  border-bottom: 1.2px solid #ffff66;
+  background-color: transparent;
+  font-size: 1rem;
+}
+input,
+textarea::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+  font-size: 1.5rem !important;
+}
+input:focus,
+textarea {
+  outline: none !important;
+}
+
+.btn {
+  background-color: #47d147;
+  margin-left: 8%;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  outline: none !important;
+}
+.btn:hover,
+.btn:link,
+.btn:visited {
+  color: white;
+  outline: none !important;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(black, 0.5);
+  background: linear-gradient(white, white);
+  color: #47d147;
+  outline: none !important;
+}
+.btn:after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.weather-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  font-family: 'Patrick Hand', cursive;
+}
+.city-name {
+  font-size: 2.5rem;
+  color: #ffff66;
+  margin-bottom: -0.1%;
+}
+.details-weather-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.left-details-weather-container {
+  display: flex;
+  flex-direction: column;
+}
+.temperature-container {
+  font-size: 3.9rem;
+  color: #ffff66;
+  position: relative;
+  width: 150%;
+}
+.celsius {
+  display: inline-block;
+  font-size: 2rem;
+  position: absolute;
+  top: 10;
+}
+.wind-speed {
+  font-size: 1.5rem;
+  color: #ffff66;
+}
+.right-details-weather-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sun-svg {
+  filter: invert(84%) sepia(85%) saturate(7494%) hue-rotate(356deg)
+    brightness(102%) contrast(105%);
+  width: 43px;
+}
+.overcast {
+  font-size: 1.7rem;
+  color: #ffff66;
+}
+
+.loading {
+  display: none;
+}
+
+.city-not-found {
+  width: 50%;
+  border-radius: 10px;
+  background-color: red;
+  display: none;
+}
+.city-not-found-text {
+  text-align: center;
+  font-size: 2.3rem;
+  color: white;
+  padding: 0;
+  line-height: 0;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  .mainTitle {
+    text-align: center;
+  }
+  .input-row {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 30%;
+  }
+  .weather-container {
+    width: 45%;
+  }
+  .sun-svg {
+    width: 31px;
+  }
+}

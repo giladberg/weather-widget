@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Patrick+Hand|Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather Widget</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="mainTitle">Weather Widget</h1>
+      <div class="input-row">
+        <h3 class="secTitle">Please Enter a City:&ensp;</h3>
+        <div><input type="text" id="user-input" /></div>
+        <div>
+          <button class="btn" onClick="getInput()">
+            Send
+          </button>
+        </div>
+      </div>
+      <div class="weather-container" id="weather-container">
+        <p class="city-name" id="city-name"></p>
+        <div class="details-weather-container">
+          <div class="left-details-weather-container">
+            <span class="temperature-container">
+              <span class="temperature" id="temp"> </span>
+              <span class="celsius">&#8451;</span>
+            </span>
+            <p class="wind-speed">
+              S&nbsp;<span id="wind-speed"></span> &nbsp;Km/h
+            </p>
+          </div>
+          <div class="right-details-weather-container">
+            <img
+              class="sun-svg"
+              src="photos/svg-icons/SVG/sun.svg"
+              alt="weather-sun"
+            />
+            <p class="overcast" id="overcast"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="loading" id="loading-state">
+        <img src="photos/giphy.gif" alt="loading" />
+      </div>
+      <div class="city-not-found" id="city-not-found">
+        <p class="city-not-found-text">City not found!!!</p>
+      </div>
+    </div>
+    <script src="apiKey.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
